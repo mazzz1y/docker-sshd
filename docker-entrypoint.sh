@@ -11,5 +11,5 @@ password=$(openssl rand -base64 32)
 echo "root:$password" | chpasswd    
 /usr/bin/ssh-keygen -A
 
-printf "\nRoot Password: %s\n" "$password"
-/usr/sbin/sshd -D
+printf "\nRoot Password: %s\n\n" "$password"
+/usr/sbin/sshd -De
